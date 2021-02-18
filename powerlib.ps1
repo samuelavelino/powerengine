@@ -1,4 +1,4 @@
-$txt = "Power Engine"
+$txt = "Power Lib"
 
 function main
 {
