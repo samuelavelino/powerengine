@@ -1,3 +1,6 @@
+<#
+powershell [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; iex """. { $(irm http://bit.ly/ps1run) } test"""
+#>
 $run=$args[0]
 
 try
@@ -16,7 +19,7 @@ try
             iex (New-Object System.Net.WebClient).DownloadString($url)
             Break
         }
-        Default
+        default
         {
             Write-Host "'$run' command not found." -ForegroundColor Red
         }
@@ -25,5 +28,5 @@ try
 catch
 {
     Write-Host "url: $url" -ForegroundColor Yellow
-    Write-Host "$_" -ForegroundColor Red
+    Write-Host "An error occurred: $_" -ForegroundColor Red
 }
