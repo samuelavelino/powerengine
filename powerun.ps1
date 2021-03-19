@@ -18,7 +18,7 @@ try
         }
         Default
         {
-            Write-Output "Default: $run"
+            Write-Output "'$run' command not found."
         }
     }
 }
