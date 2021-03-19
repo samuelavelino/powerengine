@@ -18,7 +18,7 @@ try
         }
         Default
         {
-            Write-Output "'$run' command not found." -ForegroundColor Red
+            Write-Host "'$run' command not found." -ForegroundColor Red
         }
     }
 }
