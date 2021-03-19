@@ -18,7 +18,7 @@ try
         }
         Default
         {
-            Write-Output "'$run' command not found."
+            Write-Output "'$run' command not found." -ForegroundColor Red
         }
     }
 }
@@ -27,5 +27,3 @@ catch
     Write-Host "url: $url" -ForegroundColor Yellow
     Write-Host "$_" -ForegroundColor Red
 }
-
-Read-Host
