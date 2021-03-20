@@ -1,6 +1,8 @@
 <#
 powershell [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; iex """. { $(irm http://bit.ly/ps1run) } test"""
 #>
+. .\powerengine.ps1
+
 $run=$args[0]
 
 try
